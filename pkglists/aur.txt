@@ -1,0 +1,14 @@
+# generated: 2025-08-14T15:55:44+08:00 on host: yuzujr
+clash-verge-rev-bin
+fcitx5-skin-fluentlight-git
+kvantum-qt6-git
+linuxqq
+matugen-bin
+mirage
+optimus-manager-git
+todesk-bin
+typora
+visual-studio-code-bin
+wechat
+wlogout
+zen-browser-bin
