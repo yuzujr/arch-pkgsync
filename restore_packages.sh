@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 # 从 pkglists 清单恢复 pacman/paru 包（只装缺的，不升级已装）
+# 恢复顺序：
+#   1) 覆盖 /etc/pacman.conf 与 /etc/pacman.d/mirrorlist（若仓库提供）
+#   2) pacman -Sy；如配置了 [archlinuxcn]，先装 archlinuxcn-keyring
+#   3) 安装 paru（优先仓库，其次 AUR 回退）
+#   4) 只安装缺失的官方包 & AUR 包
 # 用法：
-#   bash restore_packages.sh            # 正常恢复（不升级已装）
-#   bash restore_packages.sh --dry-run  # 仅预览将要安装的包
+#   bash restore_packages.sh
+#   bash restore_packages.sh --dry-run
 set -euo pipefail
 
 DRY_RUN=0
@@ -12,41 +17,66 @@ fi
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 LIST_DIR="${DOTFILES_PKGDIR:-$SCRIPT_DIR/pkglists}"
+CONF_DIR="${DOTFILES_PACMANDIR:-$SCRIPT_DIR/pacman}"
 
 PACMAN_FILE="$LIST_DIR/pacman-explicit.txt"
 AUR_FILE="$LIST_DIR/aur.txt"
 
 clean_list() {
-  # 过滤空行与注释行
   sed -e 's/#.*$//' -e 's/^[[:space:]]\+//' -e '/^[[:space:]]*$/d' "$1"
 }
 
-need_cmd() {
+has_cmd() {
   command -v "$1" >/dev/null 2>&1
 }
 
-install_paru_if_missing() {
-  if ! need_cmd paru; then
-    echo "ℹ 未检测到 paru，开始安装（需要 base-devel & git）"
-    sudo pacman -Sy --needed --noconfirm base-devel git
-    tmpdir="$(mktemp -d)"
-    trap 'rm -rf "$tmpdir"' EXIT
-    git clone https://aur.archlinux.org/paru.git "$tmpdir/paru"
-    (cd "$tmpdir/paru" && makepkg -si --noconfirm)
+apply_pacman_configs() {
+  local src_conf="$CONF_DIR/pacman.conf"
+  local src_mirror="$CONF_DIR/mirrorlist"
+  local ts
+  ts="$(date +%Y%m%d-%H%M%S)"
+
+  if [[ -f "$src_conf" ]]; then
+    echo "→ 应用 pacman.conf（备份原文件到 /etc/pacman.conf.bak.$ts）"
+    sudo install -m 644 -o root -g root "$src_conf" /etc/pacman.conf
   fi
+  if [[ -f "$src_mirror" ]]; then
+    echo "→ 应用 mirrorlist（备份原文件到 /etc/pacman.d/mirrorlist.bak.$ts）"
+    sudo install -m 644 -o root -g root "$src_mirror" /etc/pacman.d/mirrorlist
+  fi
+}
+
+install_paru_if_missing() {
+  if has_cmd paru; then
+    return 0
+  fi
+  echo "ℹ 未检测到 paru，优先尝试通过仓库安装（archlinuxcn/extra 等）"
+  sudo pacman -Sy
+
+  # 如配置了 archlinuxcn，先装 keyring 以避免签名错误
+  if grep -qs '^\s*\[archlinuxcn\]' /etc/pacman.conf; then
+    sudo pacman -S --needed --noconfirm archlinuxcn-keyring || true
+  fi
+
+  if pacman -Si paru >/dev/null 2>&1; then
+    sudo pacman -S --needed --noconfirm paru && return 0
+  fi
+
+  echo "↻ 仓库无 paru，回退到 AUR 构建"
+  sudo pacman -S --needed --noconfirm base-devel git
+  tmpdir="$(mktemp -d)"; trap 'rm -rf "$tmpdir"' EXIT
+  git clone https://aur.archlinux.org/paru.git "$tmpdir/paru"
+  (cd "$tmpdir/paru" && makepkg -si --noconfirm)
 }
 
 install_from_pacman_list() {
   local f="$1"
   if [[ ! -f "$f" ]]; then
-    echo "⚠ 未找到 $f，跳过 pacman 官方包恢复"
-    return 0
+    echo "⚠ 未找到 $f，跳过 pacman 官方包恢复"; return 0
   fi
-
-  echo "→ 同步 pacman 包（官方仓库，仅安装缺失项）"
+  echo "→ 同步 pacman 包（仅安装缺失项）"
   mapfile -t pkgs < <(clean_list "$f")
-  # 仅挑出“本机未安装”的包
-  missing=()
+  local missing=()
   for p in "${pkgs[@]}"; do
     [[ -z "$p" ]] && continue
     if pacman -Qi "$p" >/dev/null 2>&1; then
@@ -55,17 +85,12 @@ install_from_pacman_list() {
       missing+=("$p")
     fi
   done
-
   if ((${#missing[@]}==0)); then
-    echo "  ✓ 官方仓库：没有缺失的包"
-    return 0
+    echo "  ✓ 官方仓库：没有缺失的包"; return 0
   fi
-
   if (( DRY_RUN )); then
-    echo "  将安装（官方仓库）："
-    printf '    %s\n' "${missing[@]}"
+    echo "  将安装（官方仓库）："; printf '    %s\n' "${missing[@]}"
   else
-    # 不加 -u：不主动升级已装包；仅安装缺失项及其必要依赖
     sudo pacman -S --needed -- "${missing[@]}"
   fi
 }
@@ -73,14 +98,12 @@ install_from_pacman_list() {
 install_from_aur_list() {
   local f="$1"
   if [[ ! -f "$f" ]]; then
-    echo "ℹ 未找到 $f，如无 AUR 需求可忽略"
-    return 0
+    echo "ℹ 未找到 $f，如无 AUR 需求可忽略"; return 0
   fi
-
   install_paru_if_missing
   echo "→ 同步 AUR 包（仅安装缺失项）"
   mapfile -t pkgs < <(clean_list "$f")
-  missing=()
+  local missing=()
   for p in "${pkgs[@]}"; do
     [[ -z "$p" ]] && continue
     if pacman -Qi "$p" >/dev/null 2>&1; then
@@ -89,23 +112,24 @@ install_from_aur_list() {
       missing+=("$p")
     fi
   done
-
   if ((${#missing[@]}==0)); then
-    echo "  ✓ AUR：没有缺失的包"
-    return 0
+    echo "  ✓ AUR：没有缺失的包"; return 0
   fi
-
   if (( DRY_RUN )); then
-    echo "  将安装（AUR）："
-    printf '    %s\n' "${missing[@]}"
+    echo "  将安装（AUR）："; printf '    %s\n' "${missing[@]}"
   else
-    # 不加 -u：不主动升级已装包；paru 会为缺失包解决依赖
     paru -S --needed -- "${missing[@]}"
   fi
 }
 
 # 主流程
 echo "==> 使用清单目录：$LIST_DIR"
+echo "==> 尝试应用仓库 pacman 配置：$CONF_DIR"
+apply_pacman_configs
+echo "==> 初始化软件源并尝试安装 keyring / paru"
+install_paru_if_missing
+echo "==> 开始按清单恢复包（只安装缺失项）"
 install_from_pacman_list "$PACMAN_FILE"
 install_from_aur_list "$AUR_FILE"
-echo "✔ 完成"
+echo "✔ 完成（配置已应用，只安装缺失包，不主动升级已装包）"
+echo "提示：若遇到依赖版本冲突，可稍后执行：paru -Syu --devel"
