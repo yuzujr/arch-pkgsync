@@ -1,4 +1,4 @@
-# generated: 2025-08-14T16:13:28+08:00 on host: yuzujr
+# generated: 2025-08-14T21:46:18+08:00 on host: yuzujr
 7zip
 amd-ucode
 archlinuxcn-keyring
@@ -28,6 +28,7 @@ fish
 fzf
 git-delta
 glmark2
+gparted
 grim
 grub
 gst-plugin-pipewire
@@ -62,7 +63,10 @@ nvidia-settings
 nvidia-utils
 nvtop
 obs-studio
+os-prober
+pamixer
 paru
+pavucontrol
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -86,6 +90,7 @@ wget
 wireless_tools
 wireplumber
 wl-clipboard
+xclip
 xdg-utils
 xf86-video-vesa
 xorg-bdftopcf
