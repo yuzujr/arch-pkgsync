@@ -1,4 +1,4 @@
-# generated: 2025-08-14T21:46:18+08:00 on host: yuzujr
+# generated: 2025-08-17T19:29:33+08:00 on host: yuzujr
 7zip
 amd-ucode
 archlinuxcn-keyring
@@ -12,6 +12,7 @@ cava
 clang
 cmake
 dkms
+dnsmasq
 dolphin
 duf
 dust
@@ -38,6 +39,7 @@ hyprland
 hyprpicker
 hyprpolkitagent
 hyprshot
+imagemagick
 inetutils
 iwd
 jq
@@ -74,6 +76,7 @@ pipewire-pulse
 plasma-meta
 plasma-workspace
 plasma-x11-session
+plymouth
 rime-ice-git
 rofi
 slurp
@@ -85,12 +88,14 @@ swww
 tree
 uwsm
 vim
+virt-manager
 waybar
 wget
 wireless_tools
 wireplumber
 wl-clipboard
 xclip
+xdg-desktop-portal-hyprland
 xdg-utils
 xf86-video-vesa
 xorg-bdftopcf
