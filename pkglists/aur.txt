@@ -1,4 +1,4 @@
-# generated: 2025-08-20T23:16:18+08:00 on host: yuzujr
+# generated: 2025-09-11T10:59:22+08:00 on host: yuzujr
 clash-verge-rev-bin
 fcitx5-skin-fluentlight-git
 kvantum-qt6-git
@@ -10,4 +10,5 @@ typora
 visual-studio-code-bin
 wechat
 wlogout
+xmind
 zen-browser-bin

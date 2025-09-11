@@ -1,4 +1,4 @@
-# generated: 2025-08-20T23:16:18+08:00 on host: yuzujr
+# generated: 2025-09-11T10:59:22+08:00 on host: yuzujr
 7zip
 amd-ucode
 archlinuxcn-keyring
@@ -8,12 +8,11 @@ base-devel
 blueman
 bluez
 bluez-utils
-cava
-clang
 cmake
 dkms
 dnsmasq
 dolphin
+dotnet-sdk
 duf
 dust
 efibootmgr
@@ -30,19 +29,17 @@ fzf
 git-delta
 glmark2
 gparted
-grim
 grub
 gst-plugin-pipewire
 htop
 hypridle
 hyprland
-hyprpicker
+hyprlock
 hyprpolkitagent
 hyprshot
 imagemagick
 inetutils
 iwd
-jq
 kate
 kitty
 konsole
@@ -52,12 +49,12 @@ libva-nvidia-driver
 linux
 linux-firmware
 linux-headers
+meson
 mpv
-nano
 neovim
 netease-cloud-music-gtk4
-networkmanager
 network-manager-applet
+ninja
 noto-fonts-cjk
 nvidia
 nvidia-prime
@@ -77,12 +74,14 @@ plasma-meta
 plasma-workspace
 plasma-x11-session
 plymouth
+rar
 rime-ice-git
 rofi
-slurp
 smartmontools
 sof-firmware
 starship
+steam
+stress
 swaync
 swww
 tree
@@ -91,11 +90,10 @@ vim
 virt-manager
 waybar
 wget
+wine
+winetricks
 wireless_tools
-wireplumber
-wl-clipboard
 xclip
-xdg-desktop-portal-hyprland
 xdg-utils
 xf86-video-vesa
 xorg-bdftopcf
