@@ -1,4 +1,4 @@
-# generated: 2025-09-11T10:59:22+08:00 on host: yuzujr
+# generated: 2025-10-09T16:10:04+08:00 on host: yuzujr
 7zip
 amd-ucode
 archlinuxcn-keyring
@@ -12,7 +12,8 @@ cmake
 dkms
 dnsmasq
 dolphin
-dotnet-sdk
+dotnet-runtime-8.0
+downgrade
 duf
 dust
 efibootmgr
@@ -27,8 +28,6 @@ fd
 fish
 fzf
 git-delta
-glmark2
-gparted
 grub
 gst-plugin-pipewire
 htop
@@ -55,6 +54,7 @@ neovim
 netease-cloud-music-gtk4
 network-manager-applet
 ninja
+niri
 noto-fonts-cjk
 nvidia
 nvidia-prime
@@ -74,14 +74,16 @@ plasma-meta
 plasma-workspace
 plasma-x11-session
 plymouth
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
 rar
 rime-ice-git
 rofi
 smartmontools
 sof-firmware
 starship
-steam
-stress
+sunshine
 swaync
 swww
 tree
