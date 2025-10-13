@@ -1,4 +1,4 @@
-# generated: 2025-10-09T16:10:04+08:00 on host: yuzujr
+# generated: 2025-10-13T18:24:46+08:00 on host: yuzujr
 7zip
 amd-ucode
 archlinuxcn-keyring
@@ -12,7 +12,6 @@ cmake
 dkms
 dnsmasq
 dolphin
-dotnet-runtime-8.0
 downgrade
 duf
 dust
@@ -26,10 +25,12 @@ fcitx5-qt
 fcitx5-rime
 fd
 fish
+flatpak
 fzf
 git-delta
 grub
 gst-plugin-pipewire
+gvfs
 htop
 hypridle
 hyprland
@@ -42,6 +43,10 @@ iwd
 kate
 kitty
 konsole
+lib32-gamemode
+lib32-gnutls
+lib32-vkd3d
+lib32-vulkan-icd-loader
 libpulse
 librime
 libva-nvidia-driver
@@ -51,7 +56,6 @@ linux-headers
 meson
 mpv
 neovim
-netease-cloud-music-gtk4
 network-manager-applet
 ninja
 niri
@@ -90,6 +94,7 @@ tree
 uwsm
 vim
 virt-manager
+vkd3d
 waybar
 wget
 wine
