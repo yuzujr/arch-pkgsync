@@ -1,22 +1,16 @@
-# generated: 2025-12-15T18:59:36+08:00 on host: yuzujr
-clash-verge-rev-bin
+# generated: 2025-12-29T16:22:00+08:00 on host: cachyos
 clipse-bin
 clipse-gui
 fcitx5-skin-fluentlight-git
-lib32-nvidia-utils-beta
 linuxqq
-matugen-bin
+mihomo-bin
 mirage
-niriswitcher
-nvidia-open-beta-dkms
-nvidia-settings-beta
+netease-cloud-music-gtk-bin
+rime-ice-pinyin-git
 todesk-bin
+typora
 visual-studio-code-bin
 waybar-module-pacman-updates-git
 waybar-niri-taskbar-git
-waypaper
 wechat
-wlogout
-xwayland-satellite-git
 yt6801-dkms
-zen-browser-bin
