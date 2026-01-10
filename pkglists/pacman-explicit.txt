@@ -1,4 +1,4 @@
-# generated: 2025-12-29T16:22:00+08:00 on host: cachyos
+# generated: 2026-01-10T22:12:46+08:00 on host: cachyos
 7zip
 accountsservice
 alsa-firmware
@@ -9,11 +9,12 @@ ark
 base
 base-devel
 bash-completion
-blueman
+bluetui
 bluez
 bluez-hid2hci
 bluez-libs
 bluez-utils
+brightnessctl
 btop
 btrfs-assistant
 btrfs-progs
@@ -23,6 +24,7 @@ cachyos-keyring
 cachyos-mirrorlist
 cachyos-rate-mirrors
 cachyos-settings
+cachyos-snapper-support
 cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 cava
@@ -47,6 +49,7 @@ e2fsprogs
 efibootmgr
 efitools
 egl-wayland
+emacs-wayland
 ethtool
 exfatprogs
 eza
@@ -63,13 +66,13 @@ fsarchiver
 fuzzel
 fzf
 gamescope
+gdb
 git
 git-delta
 greetd
 greetd-tuigreet
 grim
 grub
-grub-btrfs-support
 grub-hook
 gst-libav
 gst-plugin-pipewire
@@ -80,6 +83,7 @@ haveged
 hdparm
 hwdetect
 hwinfo
+hyprlock
 imv
 inetutils
 iptables-nft
@@ -95,6 +99,7 @@ lib32-vulkan-radeon
 libdvdcss
 libgsf
 libopenraw
+libreoffice-fresh
 libva-nvidia-driver
 libwnck3
 linux-cachyos
@@ -114,13 +119,14 @@ man-db
 mangohud
 matugen
 mdadm
-meld
 mesa-utils
 meson
 mkinitcpio
 modemmanager
 mpv
 mtools
+mupdf
+mupdf-tools
 neovim-git
 networkmanager
 network-manager-applet
@@ -139,7 +145,6 @@ nvidia-settings
 nvidia-utils
 nvtop
 obs-studio
-onlyoffice-bin
 opencl-nvidia
 openssh
 os-prober
@@ -151,7 +156,8 @@ perl
 pipewire-alsa
 pipewire-pulse
 pkgfile
-plasma-meta
+plasma-desktop
+plasma-x11-session
 plocate
 polkit-gnome
 poppler-glib
@@ -172,8 +178,10 @@ sg3_utils
 slurp
 smartmontools
 s-nail
+snap-pac
 snapper
 sof-firmware
+spectacle
 starship
 steam
 sudo
@@ -181,6 +189,8 @@ sunshine
 swayidle
 switcheroo-control
 sysfsutils
+telegram-desktop
+tesseract-data-eng
 texinfo
 tree
 ttf-bitstream-vera
@@ -222,7 +232,7 @@ xwayland-satellite
 yakuake
 yazi
 zathura
-zathura-pdf-poppler
+zathura-pdf-mupdf
 zen-browser-bin
 zip
 zoxide

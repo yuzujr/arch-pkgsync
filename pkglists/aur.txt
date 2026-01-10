@@ -1,4 +1,4 @@
-# generated: 2025-12-29T16:22:00+08:00 on host: cachyos
+# generated: 2026-01-10T22:12:46+08:00 on host: cachyos
 clipse-bin
 clipse-gui
 fcitx5-skin-fluentlight-git
@@ -11,6 +11,5 @@ todesk-bin
 typora
 visual-studio-code-bin
 waybar-module-pacman-updates-git
-waybar-niri-taskbar-git
 wechat
 yt6801-dkms
