@@ -1,4 +1,4 @@
-# generated: 2026-01-10T22:12:46+08:00 on host: cachyos
+# generated: 2026-01-14T21:53:16+08:00 on host: cachyos
 7zip
 accountsservice
 alsa-firmware
@@ -19,12 +19,10 @@ btop
 btrfs-assistant
 btrfs-progs
 cachyos-hooks
-cachyos-kernel-manager
 cachyos-keyring
 cachyos-mirrorlist
 cachyos-rate-mirrors
 cachyos-settings
-cachyos-snapper-support
 cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 cava
@@ -89,6 +87,7 @@ inetutils
 iptables-nft
 iwd
 jfsutils
+jq
 kate
 kitty
 konsole
@@ -159,6 +158,7 @@ pkgfile
 plasma-desktop
 plasma-x11-session
 plocate
+pnpm
 polkit-gnome
 poppler-glib
 power-profiles-daemon
@@ -178,8 +178,6 @@ sg3_utils
 slurp
 smartmontools
 s-nail
-snap-pac
-snapper
 sof-firmware
 spectacle
 starship
@@ -187,7 +185,6 @@ steam
 sudo
 sunshine
 swayidle
-switcheroo-control
 sysfsutils
 telegram-desktop
 tesseract-data-eng

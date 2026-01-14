@@ -1,15 +1,13 @@
-# generated: 2026-01-10T22:12:46+08:00 on host: cachyos
+# generated: 2026-01-14T21:53:16+08:00 on host: cachyos
 clipse-bin
 clipse-gui
 fcitx5-skin-fluentlight-git
 linuxqq
 mihomo-bin
-mirage
 netease-cloud-music-gtk-bin
 rime-ice-pinyin-git
 todesk-bin
 typora
 visual-studio-code-bin
-waybar-module-pacman-updates-git
 wechat
 yt6801-dkms
