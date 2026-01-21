@@ -1,7 +1,11 @@
-# generated: 2026-01-14T21:53:16+08:00 on host: cachyos
+# generated: 2026-01-21T22:34:44+08:00 on host: cachyos
+ani2xcursor
+bibata-cursor-theme-bin
 clipse-bin
 clipse-gui
+coomer
 fcitx5-skin-fluentlight-git
+glsl_analyzer-bin
 linuxqq
 mihomo-bin
 netease-cloud-music-gtk-bin

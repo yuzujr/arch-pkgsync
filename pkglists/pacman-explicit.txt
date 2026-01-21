@@ -1,4 +1,4 @@
-# generated: 2026-01-14T21:53:16+08:00 on host: cachyos
+# generated: 2026-01-21T22:34:44+08:00 on host: cachyos
 7zip
 accountsservice
 alsa-firmware
@@ -58,6 +58,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
 fcitx5-rime
+feh
 ffmpegthumbnailer
 fish
 fsarchiver
@@ -89,6 +90,7 @@ iwd
 jfsutils
 jq
 kate
+kdenlive
 kitty
 konsole
 lib32-mesa
@@ -100,6 +102,7 @@ libgsf
 libopenraw
 libreoffice-fresh
 libva-nvidia-driver
+libvterm
 libwnck3
 linux-cachyos
 linux-cachyos-headers
@@ -124,8 +127,6 @@ mkinitcpio
 modemmanager
 mpv
 mtools
-mupdf
-mupdf-tools
 neovim-git
 networkmanager
 network-manager-applet
@@ -186,10 +187,11 @@ sudo
 sunshine
 swayidle
 sysfsutils
+tela-circle-icon-theme-standard
 telegram-desktop
-tesseract-data-eng
 texinfo
 tree
+ttc-iosevka
 ttf-bitstream-vera
 ttf-dejavu
 unrar
@@ -203,6 +205,7 @@ vlc-plugins-all
 vulkan-radeon
 waybar
 waypaper
+wev
 wf-recorder
 wget
 which
@@ -218,6 +221,7 @@ xf86-input-libinput
 xf86-video-amdgpu
 xfsprogs
 xl2tpd
+xmake
 xorg-server
 xorg-xdpyinfo
 xorg-xinit
@@ -229,7 +233,7 @@ xwayland-satellite
 yakuake
 yazi
 zathura
-zathura-pdf-mupdf
+zathura-pdf-poppler
 zen-browser-bin
 zip
 zoxide
