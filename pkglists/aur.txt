@@ -1,8 +1,6 @@
-# generated: 2026-01-21T22:34:44+08:00 on host: cachyos
+# generated: 2026-01-23T00:31:32+08:00 on host: cachyos
 ani2xcursor
 bibata-cursor-theme-bin
-clipse-bin
-clipse-gui
 coomer
 fcitx5-skin-fluentlight-git
 glsl_analyzer-bin

@@ -1,6 +1,7 @@
-# generated: 2026-01-21T22:34:44+08:00 on host: cachyos
+# generated: 2026-01-23T00:31:32+08:00 on host: cachyos
 7zip
 accountsservice
+adw-gtk-theme
 alsa-firmware
 alsa-plugins
 alsa-utils
@@ -62,7 +63,6 @@ feh
 ffmpegthumbnailer
 fish
 fsarchiver
-fuzzel
 fzf
 gamescope
 gdb
@@ -82,7 +82,6 @@ haveged
 hdparm
 hwdetect
 hwinfo
-hyprlock
 imv
 inetutils
 iptables-nft
@@ -116,7 +115,6 @@ lsb-release
 lsscsi
 lutris
 lvm2
-mako
 man-db
 mangohud
 matugen
@@ -135,6 +133,7 @@ nfs-utils
 nilfs-utils
 niri
 nm-connection-editor
+noctalia-shell
 nodejs
 noto-fonts-cjk
 nss-mdns
@@ -144,6 +143,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 nvtop
+nwg-look
 obs-studio
 opencl-nvidia
 openssh
@@ -168,6 +168,7 @@ python
 python-defusedxml
 python-packaging
 qt5ct
+qt5-wayland
 qt6ct
 rebuild-detector
 reflector
@@ -203,8 +204,6 @@ vim
 virt-manager
 vlc-plugins-all
 vulkan-radeon
-waybar
-waypaper
 wev
 wf-recorder
 wget
