@@ -1,4 +1,4 @@
-# generated: 2026-01-23T00:31:32+08:00 on host: cachyos
+# generated: 2026-01-25T23:14:53+08:00 on host: cachyos
 7zip
 accountsservice
 adw-gtk-theme
@@ -7,6 +7,7 @@ alsa-plugins
 alsa-utils
 amd-ucode
 ark
+asio
 base
 base-devel
 bash-completion
@@ -68,6 +69,7 @@ gamescope
 gdb
 git
 git-delta
+gpu-screen-recorder
 greetd
 greetd-tuigreet
 grim
@@ -117,7 +119,6 @@ lutris
 lvm2
 man-db
 mangohud
-matugen
 mdadm
 mesa-utils
 meson
@@ -163,6 +164,7 @@ pnpm
 polkit-gnome
 poppler-glib
 power-profiles-daemon
+powertop
 pv
 python
 python-defusedxml
@@ -212,7 +214,6 @@ wireless-regdb
 wireplumber
 wl-clipboard
 wl-clip-persist
-wlogout
 wpa_supplicant
 xdg-desktop-portal-gnome
 xdg-user-dirs
