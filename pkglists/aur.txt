@@ -1,12 +1,10 @@
-# generated: 2026-01-25T23:14:53+08:00 on host: cachyos
-ani2xcursor
+# generated: 2026-01-30T23:00:48+08:00 on host: cachyos
+ani2xcursor-bin
 bibata-cursor-theme-bin
 coomer
 fcitx5-skin-fluentlight-git
-glsl_analyzer-bin
 linuxqq
 mihomo-bin
-netease-cloud-music-gtk-bin
 rime-ice-pinyin-git
 todesk-bin
 typora
