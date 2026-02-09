@@ -1,4 +1,4 @@
-# generated: 2026-01-30T23:00:48+08:00 on host: cachyos
+# generated: 2026-02-09T17:17:01+08:00 on host: cachyos
 7zip
 accountsservice
 adw-gtk-theme
@@ -79,11 +79,16 @@ haveged
 hdparm
 hwdetect
 hwinfo
+i3blocks
+i3lock
+i3status
+i3-wm
 inetutils
 iptables-nft
 jfsutils
 kate
 kitty
+konsole
 lib32-mesa
 lib32-nvidia-utils
 lib32-opencl-nvidia
@@ -110,6 +115,7 @@ man-db
 mangohud
 mdadm
 mesa-utils
+meson
 mkinitcpio
 modemmanager
 mpv
@@ -138,6 +144,7 @@ onlyoffice-bin
 opencl-nvidia
 openssh
 os-prober
+pacman-contrib
 pavucontrol
 perl
 pipewire-alsa
@@ -188,7 +195,9 @@ xf86-video-amdgpu
 xfsprogs
 xl2tpd
 xmake
+xorg-server
 xorg-xdpyinfo
+xorg-xinit
 xorg-xrandr
 xorg-xwayland
 xwayland-satellite
