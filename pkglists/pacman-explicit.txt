@@ -1,4 +1,4 @@
-# generated: 2026-02-09T17:17:01+08:00 on host: cachyos
+# generated: 2026-02-15T18:47:03+08:00 on host: cachyos
 7zip
 accountsservice
 adw-gtk-theme
@@ -79,10 +79,6 @@ haveged
 hdparm
 hwdetect
 hwinfo
-i3blocks
-i3lock
-i3status
-i3-wm
 inetutils
 iptables-nft
 jfsutils
@@ -101,9 +97,6 @@ libvterm
 libwnck3
 linux-cachyos
 linux-cachyos-headers
-linux-cachyos-lts
-linux-cachyos-lts-headers
-linux-cachyos-lts-nvidia-open
 linux-cachyos-nvidia-open
 linux-firmware
 logrotate
@@ -145,11 +138,14 @@ opencl-nvidia
 openssh
 os-prober
 pacman-contrib
+pandoc-cli
 pavucontrol
 perl
 pipewire-alsa
 pipewire-pulse
 plasma-desktop
+plasma-x11-session
+playerctl
 polkit-gnome
 poppler-glib
 power-profiles-daemon
@@ -160,6 +156,7 @@ qt5-wayland
 qt6ct
 ripgrep
 rtkit
+satty
 sg3_utils
 smartmontools
 s-nail
@@ -182,6 +179,8 @@ usbutils
 vim
 vlc-plugins-all
 vulkan-radeon
+wev
+wget
 which
 wireless-regdb
 wireplumber
@@ -201,10 +200,8 @@ xorg-xinit
 xorg-xrandr
 xorg-xwayland
 xwayland-satellite
-yad
 yay
 yazi
 zathura
 zathura-pdf-poppler
-zen-browser-bin
 zoxide
