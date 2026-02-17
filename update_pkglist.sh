@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
-# 更新 pacman/paru 包清单 + 快照 pacman 配置
+# 更新 pacman/yay 包清单
 # 生成：
 #   pkglists/pacman-explicit.txt
 #   pkglists/aur.txt
-#   pacman/pacman.conf
-#   pacman/mirrorlist
 set -euo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-OUT_DIR="${DOTFILES_PKGDIR:-$SCRIPT_DIR/pkglists}"
-PACMAN_DIR="${DOTFILES_PACMANDIR:-$SCRIPT_DIR/pacman}"
+OUT_DIR="${PKGDIR:-$SCRIPT_DIR/pkglists}"
 
-mkdir -p "$OUT_DIR" "$PACMAN_DIR"
+mkdir -p "$OUT_DIR"
 
 timestamp="$(date +%Y%m%d-%H%M%S)"
 PACMAN_FILE="$OUT_DIR/pacman-explicit.txt"
@@ -34,19 +31,6 @@ pacman -Qqem | sort -u > "$AUR_FILE"
   sed -i "1i# generated: $(date -Iseconds) on host: $(hostname)" "$AUR_FILE"
 } || true
 
-# 备份 pacman 配置
-SRC_PACMAN_CONF="/etc/pacman.conf"
-SRC_MIRRORLIST="/etc/pacman.d/mirrorlist"
-
-if [[ -r "$SRC_PACMAN_CONF" ]]; then
-  cp -f "$SRC_PACMAN_CONF" "$PACMAN_DIR/pacman.conf"
-fi
-if [[ -r "$SRC_MIRRORLIST" ]]; then
-  cp -f "$SRC_MIRRORLIST" "$PACMAN_DIR/mirrorlist"
-fi
-
 echo "✔ 已更新："
 echo "  - $PACMAN_FILE"
 echo "  - $AUR_FILE"
-echo "  - $PACMAN_DIR/pacman.conf"
-echo "  - $PACMAN_DIR/mirrorlist"
