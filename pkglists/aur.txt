@@ -1,14 +1,16 @@
-# generated: 2026-02-17T14:08:19+08:00 on host: cachyos
+# generated: 2026-02-17T17:05:16+08:00 on host: cachyos
 ani2xcursor-bin
 bibata-cursor-theme-bin
 coomer-bin
 fcitx5-skin-fluentlight-git
 google-chrome
 linuxqq
+maple-mono-nf-cn-unhinted
 mihomo-bin
 rime-ice-pinyin-git
 splayer
 todesk-bin
+ttf-lxgw-wenkai
 typora
 visual-studio-code-bin
 wechat
