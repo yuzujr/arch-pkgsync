@@ -1,4 +1,4 @@
-# generated: 2026-02-17T17:05:16+08:00 on host: cachyos
+# generated: 2026-02-19T10:40:33+08:00 on host: cachyos
 7zip
 accountsservice
 adw-gtk-theme
@@ -146,7 +146,6 @@ pipewire-pulse
 plasma-desktop
 plasma-x11-session
 playerctl
-polkit-gnome
 poppler-glib
 power-profiles-daemon
 python
@@ -154,6 +153,7 @@ python-packaging
 qt5ct
 qt5-wayland
 qt6ct
+quickshell-git
 ripgrep
 rtkit
 satty
