@@ -1,4 +1,4 @@
-# generated: 2026-02-19T10:40:33+08:00 on host: cachyos
+# generated: 2026-02-22T10:21:15+08:00 on host: cachyos
 7zip
 accountsservice
 adw-gtk-theme
@@ -31,6 +31,7 @@ cliphist
 cmake
 cmark-gfm
 cryptsetup
+ddcutil
 device-mapper
 dhclient
 diffutils
@@ -66,6 +67,7 @@ gamescope
 gdb
 git
 git-delta
+gparted
 gpu-screen-recorder
 greetd
 greetd-tuigreet
@@ -135,6 +137,7 @@ nvtop
 nwg-look
 obs-studio
 onlyoffice-bin
+openai-codex
 opencl-nvidia
 openssh
 os-prober
@@ -144,8 +147,8 @@ perl
 pipewire-alsa
 pipewire-pulse
 plasma-desktop
-plasma-x11-session
 playerctl
+plocate
 poppler-glib
 power-profiles-daemon
 python
