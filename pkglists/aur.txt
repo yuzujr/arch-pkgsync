@@ -1,4 +1,4 @@
-# generated: 2026-02-22T10:21:15+08:00 on host: cachyos
+# generated: 2026-02-24T21:55:41+08:00 on host: archlinux
 ani2xcursor-bin
 bibata-cursor-theme-bin
 coomer-bin
@@ -7,10 +7,10 @@ google-chrome
 linuxqq
 maple-mono-nf-cn-unhinted
 mihomo-bin
-rime-ice-pinyin-git
+noctalia-shell
+qt6ct-kde
 splayer
 todesk-bin
-ttf-lxgw-wenkai
 typora
 visual-studio-code-bin
 wechat
