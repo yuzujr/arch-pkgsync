@@ -1,4 +1,4 @@
-# generated: 2026-02-24T21:55:41+08:00 on host: archlinux
+# generated: 2026-02-28T16:18:16+08:00 on host: archlinux
 adw-gtk-theme
 alsa-firmware
 alsa-ucm-conf
@@ -26,10 +26,10 @@ cliphist
 cmake
 cmark-gfm
 cmatrix
+csvlens
 discover
 dolphin
 dosfstools
-drkonqi
 duf
 dust
 efibootmgr
@@ -54,6 +54,7 @@ gpu-screen-recorder
 greetd
 greetd-tuigreet
 inetutils
+jq
 kactivitymanagerd
 kate
 kde-cli-tools
@@ -147,7 +148,7 @@ power-profiles-daemon
 print-manager
 qqc2-breeze-style
 qt5-wayland
-rime-ice-pinyin-git
+rime-ice-git
 satty
 sddm-kcm
 sof-firmware
@@ -162,6 +163,7 @@ telegram-desktop
 tree
 ttf-lxgw-wenkai
 vim
+vulkan-headers
 wacomtablet
 wev
 wget

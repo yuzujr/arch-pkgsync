@@ -1,14 +1,15 @@
-# generated: 2026-02-24T21:55:41+08:00 on host: archlinux
+# generated: 2026-02-28T16:18:16+08:00 on host: archlinux
 ani2xcursor-bin
 bibata-cursor-theme-bin
 coomer-bin
-fcitx5-skin-fluentlight-git
+fcitx5-mellow-themes-git
 google-chrome
 linuxqq
 maple-mono-nf-cn-unhinted
 mihomo-bin
 noctalia-shell
 qt6ct-kde
+rime-flypy
 splayer
 todesk-bin
 typora
