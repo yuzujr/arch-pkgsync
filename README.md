@@ -1,6 +1,7 @@
 # arch-pkgsync
 用于导出和恢复 Arch Linux 软件包清单（`pacman` + `AUR/yay`）。
-`pkglists` 下是我的CachyOS系统的包清单，自用。
+
+`pkglists` 下是我的 CachyOS 系统的包清单，自用。(已弃用, 现在使用[NixOS](https://github.com/yuzujr/nixos-config))
 
 ## 功能
 - 导出官方仓库显式安装包到 `pkglists/pacman-explicit.txt`
